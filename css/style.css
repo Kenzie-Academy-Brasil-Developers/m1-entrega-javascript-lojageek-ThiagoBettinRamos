@@ -11,6 +11,10 @@ header{
   align-items: center;
   justify-content: space-between;
 }
+.menu-logo img{
+  padding: 0;
+  margin: 20px;
+}
 
 header nav{
   display: flex;

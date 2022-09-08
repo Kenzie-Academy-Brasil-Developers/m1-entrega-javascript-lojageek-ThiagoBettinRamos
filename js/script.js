@@ -1,17 +1,61 @@
-let objeto = {
-    img : "./assets/img.webp",
-    nome : "produto",
-    preco : "R$125,00",
+let lista = [
+    {
+        img : "./assets/img/actions/animewoman.jpg",
+        nome : "Miss Fortune",
+        preco : "R$145,00",
+        tipo : "figure"
+    },
+    {
+        img : "./assets/img/actions/dragonballpersonagem.jpg",
+        nome : "Goku SSJ",
+        preco : "R$234,00",
+        tipo : "figure"
+    },
+    {
+        img : "./assets/img/actions/starwarspersonagem.jpg",
+        nome : "Baby Yoda",
+        preco : "R$424,00",
+        tipo : "figure"
+    },
+    {
+        img : "./assets/img/painting/clock.jpg",
+        nome : "Clock",
+        preco : "R$120,00",
+        tipo : "frame"
+    },
+    {
+        img : "./assets/img/painting/gamepad.jpg",
+        nome : "Gamepad",
+        preco : "R$143,00",
+        tipo : "frame"
+    },
+    {
+        img : "./assets/img/painting/personagem.jpg",
+        nome : "C-3PO",
+        preco : "R$246,00",
+        tipo : "frame"
+    },
+]
+let figure = {
+    img : "./assets/img/modelos/img.webp",
+    nome : "Modelos",
+    preco : "R$100,00",
     tipo : "figure"
 }
-let objeto2 = {
-    img : "./assets/img.webp",
-    nome : "produto",
-    preco : "R$125,00",
+let frame = {
+    img : "./assets/img/modelos/img.webp",
+    nome : "Modelos",
+    preco : "R$100,00",
     tipo : "frame"
 }
-let lista = [objeto, objeto, objeto, objeto, objeto2, objeto2, objeto2, objeto2]
+let lista2 = [figure , frame , figure , frame , figure , frame]
+let listfigures = []
+
+let listframes = []
+
 function separateItens(lista){
+    listfigures = []
+    listframes = []
     for(i = 0; i < lista.length; i++){
         if(lista[i].tipo == "figure"){
             listfigures.push(lista[i])
@@ -21,8 +65,6 @@ function separateItens(lista){
         }     
     }
 }
-    let listfigures = []
-    let listframes = []
 function addProdutos(lista){
     
     separateItens(lista)
@@ -97,3 +139,5 @@ function addFrames(listframes){
     }
 
 }
+addProdutos(lista)
+addProdutos(lista2)
